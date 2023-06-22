@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="content">
+        <div class="left">
+            <img src="./asset/img2.png" class="people p-animtion" alt="people">
+            <img src="./asset/img1.png" class="sphere s-animtion" alt="sphere">
+        </div>
+        <div class="right">
+            <div class="form-wrappepr">
+                <h1>Enter Our Platform</h1>
+                <input type="text" class="inputs user" placeholder="Enter Email Or Number">
+                <input type="password" class="inputs pwd" placeholder="Password">
+                <span class="tips">Recover Password</span>
+                <button>Sign In</button>
+                <div class="other-login">
+                    <div class="divider">
+                        <span class="line"></span>
+                        <span class="divider-text">or continue with</span>
+                        <span class="line"></span>
+                    </div>
+                    <div class="other-login-wrapper">
+                        <div class="other-login-item">
+                            <img src="./asset/QQ.png" alt="QQ">
+                        </div>
+                        <div class="other-login-item">
+                            <img src="./asset/WeChat.png" alt="WeChat">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+<script>
+    document.querySelector(".people").addEventListener('animationend', function () {
+        this.classList.remove('p-animtion');
+        this.classList.add('p-other-animtion')
+    });
+    document.querySelector(".sphere").addEventListener('animationend', function () {
+        this.classList.remove('s-animtion');
+        this.classList.add('s-other-animtion')
+    });	
+</script>
+
+</html>
