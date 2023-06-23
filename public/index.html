@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
@@ -17,11 +18,20 @@
         </div>
         <div class="right">
             <div class="form-wrappepr">
-                <h1>Enter Our Platform2</h1>
-                <input type="text" class="inputs user" placeholder="Enter Email Or Number">
-                <input type="password" class="inputs pwd" placeholder="Password^^">
-                <span class="tips">Recover Password</span>
-                <button>Sign In</button>
+                <div class="owl" id="owl">
+                    <div class="hand"></div>
+                    <div class="hand hand-r"></div>
+                    <div class="arms">
+                        <div class="arm"></div>
+                        <div class="arm-r"></div>
+                    </div>
+                </div>
+                <div class="input-box">
+                    <input type="text" class="inputs user" placeholder="Enter Email Or Number">
+                    <input type="password" class="inputs pwd" placeholder="Password" id="password">
+                    <span class="tips">Recover Password</span>
+                    <button>Sign In</button>
+                </div>
                 <div class="other-login">
                     <div class="divider">
                         <span class="line"></span>
@@ -51,6 +61,18 @@
         this.classList.remove('s-animtion');
         this.classList.add('s-other-animtion')
     });	
+</script>
+
+<!--owl's hands movement-->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+$(function () {
+    $('#password').focus(function () {
+        $('#owl').addClass('password');
+    }).blur(function () {
+        $('#owl').removeClass('password');
+    })
+})
 </script>
 
 </html>
