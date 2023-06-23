@@ -6,8 +6,12 @@
     margin: 0;
     min-height: 100vh;
     background-color: #abc6f8;
-    background-image: radial-gradient(closest-side, rgb(255, 255, 255), rgba(235, 105, 78, 0)), radial-gradient(closest-side, rgb(250, 203, 203), rgba(243, 11, 164, 0)), radial-gradient(closest-side, rgb(237, 252, 202), rgba(254, 234, 131, 0)), radial-gradient(closest-side, rgb(197, 248, 241), rgba(170, 142, 245, 0)), radial-gradient(closest-side, rgb(206, 200, 243), rgba(248, 192, 147, 0));
-    background-size: 130vmax 130vmax, 80vmax 80vmax, 90vmax 90vmax, 110vmax 110vmax, 90vmax 90vmax;
+    background-image: radial-gradient(closest-side, rgb(255, 255, 255), rgba(235, 105, 78, 0)), 
+    radial-gradient(closest-side, rgb(250, 203, 203), rgba(243, 11, 164, 0)), 
+    radial-gradient(closest-side, rgb(237, 252, 202), rgba(254, 234, 131, 0)), 
+    radial-gradient(closest-side, rgb(197, 248, 241), rgba(170, 142, 245, 0)), 
+    radial-gradient(closest-side, rgb(206, 200, 243), rgba(248, 192, 147, 0));
+    background-size: 130-vmax 130vmax, 80vmax 80vmax, 90vmax 90vmax, 110vmax 110vmax, 90vmax 90vmax;
     background-position: -80vmax -80vmax, 60vmax -30vmax, 10vmax 10vmax, -30vmax -10vmax, 50vmax 50vmax;
     background-repeat: no-repeat;
     animation: 10s movement linear infinite;
@@ -220,6 +224,85 @@
     box-shadow: -20px 10px 32px 1px rgba(182, 183, 185, 0.37);
   }
   
+  /*INPUT BOX*/
+  .input-box input:focus{
+    outline: 1px solid lightseagreen;
+  }
+  /* DIY owl*/
+  .owl{
+    width: 211px;
+    height: 108px;
+    background: url("./asset/owl.png") no-repeat;
+    position: absolute;
+    top: -70px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .owl .hand{
+    width: 34px;
+    height: 34px;
+    border-radius: 40px;
+    background-color : #472d20;
+    position: absolute;
+    left:12px;
+    bottom: -8px;
+    transform: scaleY(0.6);
+    transition: 0.3s ease-out;
+  }
+
+  .owl .hand.hand-r{
+    left: 170px;
+  }
+
+  .owl.password .hand{
+    transform: translateX(50px) translateY(-20px) scale(0.7);
+  }
+
+  .owl.password .hand.hand-r{
+    transform: translateX(-50px) translateY(-20px) scale(0.7);
+  }
+  
+
+  .owl .arms{
+    position: absolute;
+    top: 58px;
+    width: 100%;
+    height: 41px;
+    overflow: hidden; 
+  }
+
+  .owl .arms .arm{
+    width: 40px;
+    height: 65px;
+    position: absolute;
+    left: 20px;
+    top: 40px;
+    background: url("./asset/hand.png") no-repeat;
+    transform: rotate(-20deg);
+    transition: 0.3s ease-out;
+  }
+
+  .owl .arms .arm-r{
+    width: 40px;
+    height: 65px;
+    position: absolute;
+    background: url("./asset/hand.png") no-repeat;
+    transform: rotate(20deg) scaleX(-1);
+    transition: 0.3s ease-out;
+    left: 158px;
+    top: 40px;
+  }
+
+  .owl.password .arms .arm{
+    transform: translateY(-40px) translateX(40px);
+  } 
+
+  .owl.password .arms .arm-r{
+    transform: translateY(-40px) translateX(-40px) scaleX(-1);
+  }
+
+
   @keyframes movement {
     0%, 100% {
       background-size: 130vmax 130vmax, 80vmax 80vmax, 90vmax 90vmax, 110vmax 110vmax, 90vmax 90vmax;
