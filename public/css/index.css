@@ -246,9 +246,9 @@
     top: -4.6rem;
     left: 50%;
     transform: translateX(-50%);
-    animation: owlClimb 2s;
+    animation: owlClimb 1.9s;
     animation-timing-function: ease-out;
-    z-index: 1;
+    z-index: 3;
   }
 
   .owl .hand{
@@ -261,7 +261,6 @@
     bottom: -8px;
     transform: scaleY(0.6);
     transition: 0.3s ease-out;
-    z-index: 3;
   }
 
   .owl .hand.hand-r{
@@ -318,7 +317,11 @@
   @keyframes owlClimb {
     0% {
       bottom: 0;
-      transform: translate(-50%, 100px);
+      transform: translate(-50%, 60px);
+      z-index: 1;
+    }
+    95%{
+      z-index: 1;
     }
     100% {
       bottom: 100%; /* Adjust the distance the owl climbs */
