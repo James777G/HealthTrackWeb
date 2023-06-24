@@ -146,6 +146,8 @@
     padding: 20px;
     box-sizing: border-box;
     font-size: 16px;
+    z-index: 2;
+    position: relative;
   }
   .content .right .form-wrappepr .tips {
     display: block;
@@ -228,6 +230,13 @@
   .input-box input:focus{
     outline: 1px solid lightseagreen;
   }
+
+  .owl-container {
+    position: absolute;
+    left: 170px;
+    top: 0rem;
+  }
+
   /* DIY owl*/
   .owl{
     width: 211px;
@@ -237,6 +246,9 @@
     top: -4.6rem;
     left: 50%;
     transform: translateX(-50%);
+    animation: owlClimb 1.9s;
+    animation-timing-function: ease-out;
+    z-index: 3;
   }
 
   .owl .hand{
@@ -302,6 +314,19 @@
     transform: translateY(-40px) translateX(-40px) scaleX(-1);
   }
 
+  @keyframes owlClimb {
+    0% {
+      bottom: 0;
+      transform: translate(-50%, 60px);
+      z-index: 1;
+    }
+    95%{
+      z-index: 1;
+    }
+    100% {
+      bottom: 100%; /* Adjust the distance the owl climbs */
+    }
+  }
 
   @keyframes movement {
     0%, 100% {
