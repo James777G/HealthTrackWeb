@@ -6,15 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="./css/index.css">
 
 </head>
 
 <body>
     <div class="content">
         <div class="left">
-            <img src="../asset/img2.png" class="people p-animtion" alt="people">
-            <img src="../asset/img1.png" class="sphere s-animtion" alt="sphere">
+            <img src="./asset/img2.png" class="people p-animtion" alt="people">
+            <img src="./asset/img1.png" class="sphere s-animtion" alt="sphere">
         </div>
         <div class="right">
             <div class="form-wrappepr">
@@ -27,10 +27,10 @@
                     </div>
                 </div>
                 <div class="input-box">
-                    <input type="text" class="inputs user" placeholder="Enter Email Or Number">
+                    <input type="text" class="inputs user" placeholder="Enter Email Or Number" id="username">
                     <input type="password" class="inputs pwd" placeholder="Password" id="password">
                     <span class="tips">Recover Password</span>
-                    <button>Sign In</button>
+                    <button onclick="signInAction()">Sign In</button>
                 </div>
                 <div class="other-login">
                     <div class="divider">
@@ -40,10 +40,10 @@
                     </div>
                     <div class="other-login-wrapper">
                         <div class="other-login-item">
-                            <img src="../asset/QQ.png" alt="QQ">
+                            <img src="./asset/QQ.png" alt="QQ">
                         </div>
                         <div class="other-login-item">
-                            <img src="../asset/WeChat.png" alt="WeChat">
+                            <img src="./asset/WeChat.png" alt="WeChat">
                         </div>
                     </div>
                 </div>
@@ -65,6 +65,7 @@
 
 <!--owl's hands movement-->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="../js/owl.js"></script>
-
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="./js/owl.js"></script>
+<script src="./js/signIn.js"></script>
 </html>
